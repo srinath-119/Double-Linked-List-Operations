@@ -255,7 +255,7 @@ int main()
                     break;
             }
         }
-    } while (option !=10);
+    } while (option!=10);
     
     
 }
