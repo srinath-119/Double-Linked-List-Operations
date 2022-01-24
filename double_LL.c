@@ -83,15 +83,15 @@ struct node* insert_Beginning(struct node*head)
 struct node* insert_Atposition(struct node* head)
 {
     struct node* ptr;
-    int data,index;
+    int data,pos;
     printf("Input data for node:");
     scanf("%d",&data);
-    printf("Enter the index after which you want to insert the node:");
-    scanf("%d",&index);
+    printf("Enter the position at  which you want to insert the node:");
+    scanf("%d",&pos);
     ptr=(struct node*)malloc(sizeof(struct node));
     struct node* p=head;
-    int i=0;
-    while (i != index-1)
+    int i=1;
+    while (i != pos-1)
     {
             p=p->next;  
             i++;                           
@@ -137,16 +137,16 @@ struct node* delete_FirstNode(struct node* head)
 
 struct node* delete_Atposition(struct node* head)
 {
-    int index;
-    printf("Enter the index after which you want to delete the node:");
-    scanf("%d",&index);
+    int pos;
+    printf("Enter the position at which you want to delete the node:");
+    scanf("%d",&pos);
    
     struct node* p;
     p=head;
     struct node* q;
     q=head->next;
-    int i=0;
-    while(i != index-1)
+    int i=1;
+    while(i != pos-1)
     {
         p=p->next;
         q=q->next;
